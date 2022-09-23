@@ -8,8 +8,15 @@ xsi:schemaLocation=" http://www.springframework.org/schema/beans
 					 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 					 xmlns="http://www.springframework.org/schema/beans">
 
+
+<bean id="Informe" class="com.mdf.ioc.Informe"></bean>
+
+
 <bean id="Secretario" class="com.mdf.ioc.Secretario"></bean>
-<bean id="Director" class="com.mdf.ioc.Director"></bean>
+
+<bean id="Director" class="com.mdf.ioc.Director">
+	<constructor-arg ref="Informe"></constructor-arg>		
+</bean>
 
 
 </beans>
